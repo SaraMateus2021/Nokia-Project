@@ -1,4 +1,5 @@
 import SideNav from "./SideNav";
+import TaskList from "./TaskList";
 
 function MainContent() {
   return (
@@ -7,18 +8,7 @@ function MainContent() {
         <div className="row">
           <SideNav />
           <div className="col-sm-10">
-            <h3>Tasks</h3>
-            <ul>
-              <li>
-                Task 1
-              </li>
-              <li>
-                Task 2
-              </li>
-              <li>
-                Task 3
-              </li>
-            </ul>
+            <TaskList />
           </div>
         </div>
       </div>
