@@ -1,11 +1,11 @@
 import Header from "./Header";
-import MainContent from "./MainContent";
+import HomeContent from "./HomeContent";
 
 function Home() {
   return (
     <>
         <Header />
-        <MainContent />
+        <HomeContent />
     </>
   );
 }

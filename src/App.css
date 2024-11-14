@@ -1,0 +1,20 @@
+
+.content {
+    padding: 50px;
+    border-right: 2px solid black; /* Border to the right of the content area */
+    border-bottom: 2px solid black; /* Border to the bottom of the content area */
+}
+
+.sidebar {
+    height: calc(100vh - 160px); /* Adjust height to fit below the navbar */
+    border-right: 2px solid black; /* Border to the right of the sidebar */
+    border-left: 2px solid black; /* Border to the right of the sidebar */
+    border-bottom: 2px solid black; /* Border to the bottom of the content area */
+    background-color: white;
+    padding: 0; /* Removes the padding around the bottom lines (lift and right side) */
+  }
+
+.nav-item {
+    border-bottom: 2px solid black; 
+    width: 100%; /* Makes sure the item's line occupies 100% of the lenght of the SideNav */
+}

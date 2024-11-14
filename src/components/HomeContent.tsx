@@ -1,7 +1,6 @@
 import SideNav from "./SideNav";
-import TaskList from "./TaskList";
 
-function MainContent() {
+function HomeContent() {
   return (
     <>
       <div className="container-fluid">
@@ -10,7 +9,7 @@ function MainContent() {
             <SideNav />
           </nav>
           <main className="col-sm-10 ml-sm-auto px-md-5 content">
-            <TaskList />
+            <p>Welcome to my task list app.</p>
           </main>
         </div>
       </div>
@@ -18,4 +17,4 @@ function MainContent() {
   );
 }
 
-export default MainContent;
+export default HomeContent;

@@ -1,18 +1,20 @@
+import { Link } from "react-router-dom";
 function SideNav() {
   return (
     <>
-      <div className="col-sm-2 border=1">
-        <h3>Menu</h3>
         {/* Vertical Links */}
-        <div className="d-flex flex-column">
-          <a href="#" className="text-decoration-none mb-2">
-            Home
-          </a>
-          <a href="#" className="text-decoration-none">
-            Task
-          </a>
-        </div>
-      </div>
+        <ul className="nav flex-column ">
+         <li className="nav-item ">
+            <Link to="/" className="nav-link text-center text-dark">
+              Home
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/tasks" className="nav-link text-center text-dark">
+               Tasks
+            </Link>
+          </li>
+        </ul>
     </>
   );
 }

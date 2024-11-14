@@ -1,8 +1,8 @@
 function Header() {
   return (
     <>
-      <div className="container-fluid p-5 bg-primary text-white text-center">
-        <h1>My App</h1>
+      <div className="container-fluid p-5 bg-white text-black text-center border border-2 border-dark">
+        <h1>New App</h1>
       </div>
     </>
   );
