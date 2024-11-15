@@ -1,11 +1,13 @@
-import Header from "./Header";
-import MainContent from "./MainContent";
+import Layout from "./Layout"
+import TaskList from "./TaskList"
+
 function Tasks() {
   return (
-    <div>
-       <Header />
-       <MainContent />
-    </div>
+    <>
+      <Layout>
+        <TaskList />
+      </Layout>
+    </>
   )
 }
 

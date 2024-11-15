@@ -1,11 +1,13 @@
-import Header from "./Header";
-import HomeContent from "./HomeContent";
+import Layout from "./Layout";
 
 function Home() {
   return (
     <>
-        <Header />
-        <HomeContent />
+      <Layout>
+        <div className="container-fluid">
+          <p>Welcome to my <strong>Task List</strong> app.</p>
+        </div>
+      </Layout>
     </>
   );
 }
