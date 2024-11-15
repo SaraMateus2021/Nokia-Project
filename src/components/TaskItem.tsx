@@ -5,7 +5,7 @@ import { Task } from "../types/Taks";
 const TaskItem: React.FC<{ task: Task }> = ({ task }) => {
   return (
     <li style={{ textDecoration: task.completed ? "line-through" : "none" }}>
-     id: {task.id} {task.text} {task.completed ? "(Completed)" : "(Incomplete)"}
+      {task.text} {task.completed ? "(Completed)" : "(Incomplete)"}
     </li>
   );
 };

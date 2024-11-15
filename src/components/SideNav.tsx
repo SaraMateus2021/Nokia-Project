@@ -6,12 +6,12 @@ function SideNav() {
         <ul className="nav flex-column ">
          <li className="nav-item ">
             <Link to="/" className="nav-link text-center text-dark">
-              Home
+             <i className="fas fa-home"/>  Home
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/tasks" className="nav-link text-center text-dark">
-               Tasks
+               <i className="fas fa-tasks"/> Tasks
             </Link>
           </li>
         </ul>
