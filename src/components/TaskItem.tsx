@@ -1,12 +1,13 @@
+import React from "react";
+import { Task } from "../types/Taks";
 
-function TaskItem() {
+
+const TaskItem: React.FC<{ task: Task }> = ({ task }) => {
   return (
-    <>
-        <li>Task 1</li>
-        <li>Task 2</li>
-        <li>Task 3</li>
-    </>
-  )
-}
+    <li style={{ textDecoration: task.completed ? "line-through" : "none" }}>
+     id: {task.id} {task.text} {task.completed ? "(Completed)" : "(Incomplete)"}
+    </li>
+  );
+};
 
-export default TaskItem
+export default TaskItem;
