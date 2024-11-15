@@ -1,23 +1,30 @@
 
-.content {
-    padding: 50px;
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
-    min-height: 100vh; /* Guarantees that the content occupies at least the size of the screen */
-    flex-grow: 1; /* Makes the contet grow as necessary */
+.header {
+    position: sticky;
+    top: 0;
 }
-
 .sidebar {
-    min-height: 100vh; 
-    height: auto; /* alows height to grow as the contet grows */
+    position: fixed; /* Fixes the sidebar in place */
+    left: 0; /* Aligns the sidebar to the left edge */
+    min-height: 100vh; /* Ensures the sidebar spans the full height of the viewport */
+    width: 250px; /* Defines a fixed width for the sidebar */
     border-right: 2px solid black;
     border-left: 2px solid black;
     border-bottom: 2px solid black;
     background-color: white;
     padding: 0;
     margin: 0;
+    overflow-y: auto; /* Adds scroll if the sidebar content overflows */
 }
 
+.content {
+    margin-left: 250px; /* Leaves space for the fixed sidebar */
+    padding: 50px;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    min-height: 100vh; /* Ensures content spans the full height of the viewport */
+    flex-grow: 1; /* Allows the content to grow as necessary */
+}
 .nav-item {
     border-bottom: 2px solid black; 
     width: 100%; /* Makes sure the item's line occupies 100% of the lenght of the SideNav */
