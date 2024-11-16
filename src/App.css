@@ -17,11 +17,15 @@
 }
 
 .content {
-    position: fixed; /* Fixes the main content in place */
+    position: absolute; /* Fixes the main content in place */
     margin-left: 250px; /* Leaves space for the fixed sidebar */
+    width: calc(100% - 250px);
     padding: 30px;
     min-height: 100vh; /* Ensures content spans the full height of the viewport */
     flex-grow: 1; /* Allows the content to grow as necessary */
+    background-color: rgb(248, 249, 250);
+    border-right: 2px solid black;
+    
 }
 .nav-item {
     border-bottom: 2px solid black; 

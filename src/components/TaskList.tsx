@@ -49,7 +49,7 @@ function TaskList() {
     <div>
       <br />
       {error ? (
-        <p className="text-warning">{error}</p>
+        <p className="text-danger">{error}</p>
       ) : tasks.length === 0 ? (
         <p>No Tasks</p>
       ) : (
