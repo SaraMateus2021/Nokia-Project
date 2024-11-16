@@ -59,7 +59,8 @@ function TaskList() {
               <TaskItem key={task.id} task={task} />
             ))}
           </ul>
-          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+
+          { tasks.length >= tasksPerPage ? <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
             <button
               onClick={handlePreviousPage}
               disabled={currentPage === 1}
@@ -77,7 +78,8 @@ function TaskList() {
             >
               Next
             </button>
-          </div>
+          </div> : ""
+        }
         </>
       )}
     </ div>
