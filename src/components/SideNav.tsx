@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-function SideNav() {
+
+const SideNav = ()=> {
   return (
     <>
         {/* Vertical Links */}

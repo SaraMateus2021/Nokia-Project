@@ -1,12 +1,12 @@
 
-interface PagesProps {
+interface PaginationProps {
     currentPage: number; 
     totalPages: number; 
     handlePreviousPage: () => void; 
     handleNextPage: () => void; 
   }
 
-const Pages = ({currentPage, totalPages, handlePreviousPage, handleNextPage }: PagesProps) => {
+const Pagination = ({currentPage, totalPages, handlePreviousPage, handleNextPage }:PaginationProps) => {
   return (
     <div className="d-flex align-items-center gap-3">
             <button
@@ -30,4 +30,4 @@ const Pages = ({currentPage, totalPages, handlePreviousPage, handleNextPage }: P
   )
 }
 
-export default Pages
+export default Pagination

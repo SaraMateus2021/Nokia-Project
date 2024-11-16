@@ -1,6 +1,6 @@
 import Layout from "./Layout";
 
-function Home() {
+const Home = () => {
   return (
     <>
       <Layout>

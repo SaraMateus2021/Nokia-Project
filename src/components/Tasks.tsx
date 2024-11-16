@@ -1,7 +1,7 @@
 import Layout from "./Layout"
 import TaskList from "./TaskList"
 
-function Tasks() {
+const Tasks = () => {
   return (
     <>
       <Layout>

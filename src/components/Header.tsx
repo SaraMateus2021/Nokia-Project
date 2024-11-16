@@ -1,4 +1,4 @@
-function Header() {
+const Header = () => {
   return (
     <>
       	  <div className="container-fluid d-flex align-items-center p-5 bg-white text-black border border-2 border-dark header">

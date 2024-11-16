@@ -1,10 +1,10 @@
 import { FetchTasksResult, TaskService } from "../service/TaskService";
 import { Task } from "../types/Taks";
-import Pages from "./Pages";
+import Pagination from "./Pagination";
 import TaskItem from "./TaskItem";
 import { useEffect, useState } from "react";
 
-function TaskList() {
+const TaskList = ()=> {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -61,7 +61,7 @@ function TaskList() {
             ))}
           </ul>
 
-          { tasks.length >= tasksPerPage ? Pages({currentPage, totalPages, handlePreviousPage, handleNextPage}) : ""
+          { tasks.length >= tasksPerPage ? Pagination({currentPage, totalPages, handlePreviousPage, handleNextPage}) : ""
         }
         </>
       )}

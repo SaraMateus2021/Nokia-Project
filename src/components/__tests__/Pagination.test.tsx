@@ -1,11 +1,11 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import Pages from "../Pages";
+import Pagination from "../Pagination";
 import "@testing-library/jest-dom";
 
 describe("Pages Component", () => {
     test("should disable the 'Previous' button when on the first page", () => {
         render(
-          <Pages
+          <Pagination
             currentPage={1}
             totalPages={5}
             handlePreviousPage={jest.fn()}
@@ -19,7 +19,7 @@ describe("Pages Component", () => {
 
     test("should disable the 'Next' button when on the last page", () => {
         render(
-          <Pages
+          <Pagination
             currentPage={5}
             totalPages={5}
             handlePreviousPage={jest.fn()}
@@ -33,7 +33,7 @@ describe("Pages Component", () => {
 
       test("should enable both buttons when not on the first or last page", () => {
         render(
-          <Pages
+          <Pagination
             currentPage={3}
             totalPages={5}
             handlePreviousPage={jest.fn()}
@@ -50,7 +50,7 @@ describe("Pages Component", () => {
 
       test("should display the correct page text", () => {
         render(
-          <Pages
+          <Pagination
             currentPage={3}
             totalPages={5}
             handlePreviousPage={jest.fn()}
@@ -66,7 +66,7 @@ describe("Pages Component", () => {
         const mockHandlePreviousPage = jest.fn();
     
         render(
-          <Pages
+          <Pagination
             currentPage={3}
             totalPages={5}
             handlePreviousPage={mockHandlePreviousPage}
@@ -84,7 +84,7 @@ describe("Pages Component", () => {
         const mockHandleNextPage = jest.fn();
     
         render(
-          <Pages
+          <Pagination
             currentPage={3}
             totalPages={5}
             handlePreviousPage={jest.fn()}

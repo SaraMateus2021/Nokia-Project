@@ -3,7 +3,7 @@ import './App.css'
 import Home from './components/Home'
 import Tasks from "./components/Tasks"
 
-function App() {
+const App = () => {
 
   return (
     <>
