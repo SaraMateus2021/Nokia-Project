@@ -1,8 +1,10 @@
-import React from "react";
 import { Task } from "../types/Taks";
 
+interface TaskItemProps {
+  task: Task;
+}
 
-const TaskItem: React.FC<{ task: Task }> = ({ task }) => {
+const TaskItem = ({ task }: TaskItemProps) => {
   return (
     <li style={{ textDecoration: task.completed ? "line-through" : "none" }}>
       {task.text} {task.completed ? "(Completed)" : "(Incomplete)"}

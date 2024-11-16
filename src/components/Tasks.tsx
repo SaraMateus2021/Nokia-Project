@@ -1,5 +1,5 @@
-import Layout from "./Layout"
-import TaskList from "./TaskList"
+import Layout from "./Layout";
+import TaskList from "./TaskList";
 
 const Tasks = () => {
   return (
@@ -8,7 +8,7 @@ const Tasks = () => {
         <TaskList />
       </Layout>
     </>
-  )
-}
+  );
+};
 
-export default Tasks
+export default Tasks;

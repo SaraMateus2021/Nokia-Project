@@ -4,7 +4,7 @@ import Pagination from "./Pagination";
 import TaskItem from "./TaskItem";
 import { useEffect, useState } from "react";
 
-const TaskList = ()=> {
+const TaskList = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -61,12 +61,18 @@ const TaskList = ()=> {
             ))}
           </ul>
 
-          { tasks.length >= tasksPerPage ? Pagination({currentPage, totalPages, handlePreviousPage, handleNextPage}) : ""
-        }
+          {tasks.length >= tasksPerPage
+            ? Pagination({
+                currentPage,
+                totalPages,
+                handlePreviousPage,
+                handleNextPage,
+              })
+            : ""}
         </>
       )}
-    </ div>
+    </div>
   );
-}
+};
 
 export default TaskList;
