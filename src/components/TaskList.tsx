@@ -1,5 +1,6 @@
 import { FetchTasksResult, TaskService } from "../service/TaskService";
 import { Task } from "../types/Taks";
+import Pages from "./Pages";
 import TaskItem from "./TaskItem";
 import { useEffect, useState } from "react";
 
@@ -60,25 +61,7 @@ function TaskList() {
             ))}
           </ul>
 
-          { tasks.length >= tasksPerPage ? <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-            <button
-              onClick={handlePreviousPage}
-              disabled={currentPage === 1}
-              className="btn btn-primary"
-            >
-              Previous
-            </button>
-            <span>
-              Page {currentPage} of {totalPages}
-            </span>
-            <button
-              onClick={handleNextPage}
-              disabled={currentPage === totalPages}
-              className="btn btn-primary"
-            >
-              Next
-            </button>
-          </div> : ""
+          { tasks.length >= tasksPerPage ? Pages({currentPage, totalPages, handlePreviousPage, handleNextPage}) : ""
         }
         </>
       )}
