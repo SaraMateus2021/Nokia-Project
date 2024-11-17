@@ -9,7 +9,12 @@ const TaskList = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState<number>(1);
+
   const tasksPerPage = 18;
+  const totalTasks = tasks.length;
+  const totalPages = Math.ceil(totalTasks / tasksPerPage);
+  const startIndex = (currentPage - 1) * tasksPerPage;
+  const currentTasks = tasks.slice(startIndex, startIndex + tasksPerPage);
 
   useEffect(() => {
     const loadTasks = async () => {
@@ -24,12 +29,14 @@ const TaskList = () => {
     };
 
     loadTasks();
+
+    const intervalId = setInterval(loadTasks, 61000)
+
+    return () => {
+      clearInterval(intervalId);
+    }
   }, []);
 
-  const totalTasks = tasks.length;
-  const totalPages = Math.ceil(totalTasks / tasksPerPage);
-  const startIndex = (currentPage - 1) * tasksPerPage;
-  const currentTasks = tasks.slice(startIndex, startIndex + tasksPerPage);
 
   const handleNextPage = () => {
     if (currentPage < totalPages) {
